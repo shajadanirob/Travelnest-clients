@@ -9,6 +9,8 @@ import Schedules from "../Pages/DashBoard/Schedules";
 import Register from "../Pages/Register/Register";
 import ManageService from "../Pages/DashBoard/ManageService";
 import UpdateServices from "../Pages/DashBoard/UpdateServices";
+import MyBookings from "../Pages/DashBoard/MyBookings";
+import MyPendingWork from "../Pages/DashBoard/MyPendingWork";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
                         path:'/TravelNest/dashboard/schedules',
                         element:<Schedules></Schedules>
                     },
+                    {
+                       path:'/TravelNest/dashboard/bookings',
+                       element:<MyBookings></MyBookings> 
+                    },
+                    {
+                        path:'/TravelNest/dashboard/pending',
+                        element:<MyPendingWork></MyPendingWork>
+                    }
                     
                 ]
             },

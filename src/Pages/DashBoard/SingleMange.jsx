@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const SingleMange = ({service}) => {
+const SingleMange = ({service,handleDelete}) => {
+    
     const{_id,image,userName,userEmail} =service
+  
+
+
+
     return (
         <tr>
         <td className="px-6 py-4 whitespace-nowrap">
@@ -28,7 +34,7 @@ const SingleMange = ({service}) => {
         </td>
         <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
             <Link to={`/TravelNest/update/${_id}`} className="text-indigo-600 hover:text-indigo-900">Edit</Link>
-            <a href="#" className="ml-2 text-red-600 hover:text-red-900">Delete</a>
+            <button onClick={() => handleDelete(_id)} className="ml-2 text-red-600 hover:text-red-900">Delete</button>
         </td>
     </tr>
     );

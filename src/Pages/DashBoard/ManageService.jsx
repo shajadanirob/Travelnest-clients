@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SingleMange from "./SingleMange";
+import Swal from "sweetalert2";
 
 
 const ManageService = () => {
@@ -9,6 +10,29 @@ const ManageService = () => {
         .then(res =>res.json())
         .then(data => setServices(data))
     },[])
+    
+    
+    const handleDelete = id =>{
+        console.log(id)
+        fetch(`http://localhost:5000/delete/${id} `,{
+            method:'DELETE'
+        })
+        .then(res => res.json())
+        
+        .then(data => {
+            console.log(data)
+    
+            if(data.deletedCount >0){
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                  )
+                  setServices(services.filter(data => data._id !== services._id))
+                 
+            }
+        } )
+    }
     return (
         <div>
             <div>
@@ -32,7 +56,7 @@ const ManageService = () => {
     <tbody className="bg-white divide-y divide-gray-200">
      
 {
-    services.map(service => <SingleMange key={service._id} service={service}></SingleMange>)
+    services.map(service => <SingleMange key={service._id} service={service} handleDelete={handleDelete}></SingleMange>)
 }
 
 

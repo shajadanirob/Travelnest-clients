@@ -21,7 +21,16 @@ const DashBoard = () => {
         </Link>
 
         <Link to='/TravelNest/dashboard/schedules' className="inline-block text-gray-600 hover:text-black my-4 w-full">
-        <span className="material-icons-outlined float-left pr-2"> My Schedules</span>
+        <span className="material-icons-outlined float-left pr-2">
+
+        <div className="dropdown">
+  <label tabIndex={0} className=" w-full m-1"> My Schedules</label>
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><Link to='/TravelNest/dashboard/bookings'>My Bookings</Link></li>
+    <li><Link to='/TravelNest/dashboard/pending'>My Pending works</Link></li>
+  </ul>
+        </div>
+        </span>
        
         </Link>
       </div>
