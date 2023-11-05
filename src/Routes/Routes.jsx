@@ -12,6 +12,8 @@ import UpdateServices from "../Pages/DashBoard/UpdateServices";
 import MyBookings from "../Pages/DashBoard/MyBookings";
 import MyPendingWork from "../Pages/DashBoard/MyPendingWork";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import ServicesDetails from "../Pages/Services/ServicesDetals/ServicesDetails";
+import Modal from "../Pages/Services/ServicesDetals/Modal";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +27,20 @@ const router = createBrowserRouter([
             {
                 path:'/TravelNest/services',
                 element:<Services></Services>
+            },
+            {
+                path:'/services/:id',
+                element:<PrivetRoute>
+                    <ServicesDetails></ServicesDetails>
+                </PrivetRoute>,
+                loader:({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+
+            },
+            {
+                path:'/services/:id',
+                element:<Modal></Modal>,
+                loader:({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+
             },
             {
                 path:'/TravelNest/update/:id',

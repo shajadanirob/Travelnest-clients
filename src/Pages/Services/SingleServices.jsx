@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const SingleServices = ({service}) => {
@@ -16,19 +17,21 @@ const SingleServices = ({service}) => {
       
           <div className="mt-32 sm:mt-48 lg:mt-64">
             <div
-              className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+              className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 space-y-2"
             >
               <p className="text-sm text-white">
                 {serviceDescription.slice(0,100)}....
               </p>
               <p className="text-xl text-white">Services by:   {userName}</p>
+              <p className="text-xl text-white">Service Area : {servicesArea}</p>
               <p className="text-xl text-center text-[#efae37]">Price:${price}</p>
-              <div className='text-center my-2'>
+              <Link to={`/services/${_id}`} className='text-center my-2'>
                   <button className='btn bg-[#efae37] py-3 px-8'>Explore</button>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
+
                   </div>
     );
 };
