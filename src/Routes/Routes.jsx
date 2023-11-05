@@ -5,9 +5,10 @@ import Services from "../Pages/Services/Services";
 import Login from "../Pages/Login/Login";
 import DashBoard from "../Pages/DashBoard/DashBoard";
 import AddServices from "../Pages/DashBoard/AddServices";
-import UpdateServices from "../Pages/DashBoard/UpdateServices";
 import Schedules from "../Pages/DashBoard/Schedules";
 import Register from "../Pages/Register/Register";
+import ManageService from "../Pages/DashBoard/ManageService";
+import UpdateServices from "../Pages/DashBoard/UpdateServices";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
                 element:<Services></Services>
             },
             {
+                path:'/TravelNest/update/:id',
+                element:<UpdateServices></UpdateServices>,
+                loader:({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+            },
+            {
                 path:'/TravelNest/dashboard',
                 element:<DashBoard></DashBoard>,
                 children:[
@@ -32,12 +38,13 @@ const router = createBrowserRouter([
                     },
                     {
                         path:'/TravelNest/dashboard/updated',
-                        element:<UpdateServices></UpdateServices>
+                        element:<ManageService></ManageService>
                     },
                     {
                         path:'/TravelNest/dashboard/schedules',
                         element:<Schedules></Schedules>
-                    }
+                    },
+                    
                 ]
             },
             {
@@ -47,7 +54,8 @@ const router = createBrowserRouter([
             {
                 path:'/TravelNest/register',
                 element:<Register></Register>
-            }
+            },
+           
         ]
     },
 ]);

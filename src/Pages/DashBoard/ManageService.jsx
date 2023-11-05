@@ -1,9 +1,47 @@
+import { useEffect, useState } from "react";
+import SingleMange from "./SingleMange";
 
 
 const ManageService = () => {
+    const [services,setServices] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/services')
+        .then(res =>res.json())
+        .then(data => setServices(data))
+    },[])
     return (
         <div>
-            
+            <div>
+      <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
+    <thead className="bg-gray-50">
+        <tr>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Name
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Title
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Email
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody className="bg-white divide-y divide-gray-200">
+     
+{
+    services.map(service => <SingleMange key={service._id} service={service}></SingleMange>)
+}
+
+
+
+    </tbody>
+</table>
+
+
+      </div>
         </div>
     );
 };
