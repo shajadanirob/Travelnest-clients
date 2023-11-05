@@ -11,6 +11,7 @@ import ManageService from "../Pages/DashBoard/ManageService";
 import UpdateServices from "../Pages/DashBoard/UpdateServices";
 import MyBookings from "../Pages/DashBoard/MyBookings";
 import MyPendingWork from "../Pages/DashBoard/MyPendingWork";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -36,23 +37,33 @@ const router = createBrowserRouter([
                 children:[
                     {
                         path:'/TravelNest/dashboard',
-                        element:<AddServices></AddServices>
+                        element:<PrivetRoute>
+                            <AddServices></AddServices>
+                        </PrivetRoute>
                     },
                     {
                         path:'/TravelNest/dashboard/updated',
-                        element:<ManageService></ManageService>
+                        element:<PrivetRoute>
+                            <ManageService></ManageService>
+                        </PrivetRoute>
                     },
                     {
                         path:'/TravelNest/dashboard/schedules',
-                        element:<Schedules></Schedules>
+                        element:<PrivetRoute>
+                            <Schedules></Schedules>
+                        </PrivetRoute>
                     },
                     {
                        path:'/TravelNest/dashboard/bookings',
-                       element:<MyBookings></MyBookings> 
+                       element:<PrivetRoute>
+                        <MyBookings></MyBookings>
+                       </PrivetRoute> 
                     },
                     {
                         path:'/TravelNest/dashboard/pending',
-                        element:<MyPendingWork></MyPendingWork>
+                        element:<PrivetRoute>
+                            <MyPendingWork></MyPendingWork>
+                        </PrivetRoute>
                     }
                     
                 ]

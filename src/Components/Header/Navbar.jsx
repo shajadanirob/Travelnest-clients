@@ -37,22 +37,13 @@ const Navbar = () => {
     <ol><NavLink to='/TravelNest/services'className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "underline text-red-500" : ""
   }>Services</NavLink></ol>
-    <ol><NavLink to='/TravelNest/dashboard'className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "underline text-red-500" : ""
-  }>DashBoard</NavLink></ol>
+    {
+      user ? <ol><NavLink to='/TravelNest/dashboard'className={({ isActive, isPending }) =>
+      isPending ? "pending" : isActive ? "underline text-red-500" : ""
+    }>DashBoard</NavLink></ol> :''
+    }
  
-    {/* {
-        user? 
-        <>
-        <ol><NavLink to='/blog'className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "underline text-red-500" : ""
-  }>Blog</NavLink></ol>
-        
-        <ol><NavLink to='/profile'className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "underline text-red-500" : ""
-  }>Profile</NavLink></ol>
-        </>:''
-    } */}
+   
 </>
 
     return (

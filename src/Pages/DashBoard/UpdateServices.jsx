@@ -66,31 +66,31 @@ const UpdateServices = () => {
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                       <label for="product-name" className="text-sm font-medium text-gray-900 block mb-2">Service Name</label>
-                      <input type="text" name="ServiceName" id="product-name"  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="Service Name”" required=""/>
+                      <input type="text" name="ServiceName" id="product-name"  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="Service Name" required/>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                       <label for="product-name" className="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-                      <input type="email" defaultValue={user?.email} name="email" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" required/>
+                      <input type="email" defaultValue={user?.email} name="email" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"  required/>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                       <label for="category" className="text-sm font-medium text-gray-900 block mb-2"> Service Area</label>
-                      <input type="text" name="area" id="category" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="Service Area" required=""/>
+                      <input type="text" name="area" id="category" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="Service Area" required/>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                       <label for="brand" className="text-sm font-medium text-gray-900 block mb-2">Photo Url</label>
-                      <input type="text" name="img" id="brand" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="photo url" required=""/>
+                      <input type="text" name="img" id="brand" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="photo url" required/>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                       <label for="price" className="text-sm font-medium text-gray-900 block mb-2">Price</label>
-                      <input type="number" name="price" id="price" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="$2300" required=""/>
+                      <input type="number" name="price" id="price" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="$2300" required/>
                   </div>
                   <div className="col-span-full">
                       <label for="product-details" className="text-sm font-medium text-gray-900 block mb-2">Description</label>
-                      <textarea id="product-details" rows="6" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-4" placeholder="Description" name="description"></textarea>
+                      <textarea id="product-details" rows="6" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-4" placeholder="Description" name="description" required></textarea>
                   </div>
               </div>
               <div className="p-6 border-t border-gray-200 rounded-b flex items-center justify-center">
-          <button className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Add Services</button>
+          <button className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Update Services</button>
       </div>
           </form>
         
