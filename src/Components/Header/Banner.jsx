@@ -1,5 +1,5 @@
-import videoTwo from '../../public/pexels-ibrahim-bennett-5717020 (2160p).mp4'
-import '../../public/Banner.css'
+import videoTwo from '../../../public/pexels-ibrahim-bennett-5717020 (2160p).mp4'
+import '../../../public/Banner.css'
 
 
 const Banner = () => {
