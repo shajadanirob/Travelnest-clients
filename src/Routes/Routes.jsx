@@ -7,6 +7,7 @@ import DashBoard from "../Pages/DashBoard/DashBoard";
 import AddServices from "../Pages/DashBoard/AddServices";
 import UpdateServices from "../Pages/DashBoard/UpdateServices";
 import Schedules from "../Pages/DashBoard/Schedules";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path:'/TravelNest/login',
                 element:<Login></Login>
+            },
+            {
+                path:'/TravelNest/register',
+                element:<Register></Register>
             }
         ]
     },

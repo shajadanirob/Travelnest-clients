@@ -1,8 +1,27 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import UseAuth from "../../Hooks/UseAuth";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user,logOut} = UseAuth();
+
+  const handlelogOut = e =>{
+    e.preventDefault()
+    logOut()
+    .then(result =>{
+        toast.success('logout successFully')
+        console.log(result)
+    })
+    .catch(error =>{
+        console.log(error)
+    })
+}
+
+
+
     const [menuOpen, setMenuOpen] = useState(false);
+
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -50,7 +69,7 @@ const Navbar = () => {
             {NabLinks}
           </div>
           <div className="flex items-center hidden lg:inline-flex">
-          {/* {
+          {
             user?<div className="dropdown dropdown-end flex justify-center items-center">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
@@ -61,13 +80,13 @@ const Navbar = () => {
                         onClick={handlelogOut}
                     >Logout</button>
             </div>
-            : <> </>
-          } */}
-
-
-<Link className='my-5' to='/login'>
+            : <> <Link className='my-5' to='/TravelNest/login'>
             <button className="btn bg-[#E5AE49] text-white">Login</button>
-            </Link>
+            </Link> </>
+          }
+
+
+
           </div>
           <div className="md:hidden  flex items-center">
             <button onClick={toggleMenu} className="text-white">
@@ -84,7 +103,7 @@ const Navbar = () => {
         {menuOpen && (
           <div className="md:hidden text-center text-white mt-2 space-y-8 font-bold translate-y-3">
            {NabLinks}
-             {/* {
+             {
             user?<div className="dropdown dropdown-end flex justify-center items-center mt-4">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
@@ -95,11 +114,11 @@ const Navbar = () => {
                         onClick={handlelogOut}
                     >Logout</button>
             </div>
-            :
-          } */}
-          <Link to='/login'>
+            :<> <Link to='/login'>
             <button className="btn bg-[#FF630E] text-white">Login</button>
-            </Link>
+            </Link></>
+          }
+         
          </div>
         )}
         </nav>
