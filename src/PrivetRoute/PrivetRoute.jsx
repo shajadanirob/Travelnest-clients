@@ -22,7 +22,7 @@ const PrivetRoute = ({children}) => {
      }
  
  
-     return <Navigate state={location.pathname} to='/login'></Navigate>
+     return <Navigate state={location.pathname} to='/TravelNest/login'></Navigate>
 };
 
 export default PrivetRoute;

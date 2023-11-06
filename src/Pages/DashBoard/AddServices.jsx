@@ -5,6 +5,7 @@ import UseAuth from "../../Hooks/UseAuth";
 
 const AddServices = () => {
     const{user} = UseAuth()
+    console.log(user.photoURL)
     const handleSubmit = event =>{
         event.preventDefault()
         const form = event.target;
@@ -15,8 +16,9 @@ const AddServices = () => {
         const servicesArea = form.area.value;
         const serviceDescription = form.description.value;
         const image = form.img.value
+        const providerImg = form.providerImg.value
         console.log(userName,userEmail,ServiceName,price,servicesArea,serviceDescription,image)
-        const services ={userName,userEmail,ServiceName,price,serviceDescription,image,servicesArea}
+        const services ={userName,userEmail,ServiceName,price,serviceDescription,image,servicesArea,providerImg}
       
         fetch("http://localhost:5000/services", {
             method: "POST",
@@ -75,10 +77,17 @@ const AddServices = () => {
                     <label for="category" className="text-sm font-medium text-gray-900 block mb-2"> Service Area</label>
                     <input type="text" name="area" id="category" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="Service Area" required/>
                 </div>
+
                 <div className="col-span-6 sm:col-span-3">
                     <label for="brand" className="text-sm font-medium text-gray-900 block mb-2">Photo Url</label>
                     <input type="text" name="img" id="brand" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="photo url" required/>
                 </div>
+
+                <div className="col-span-6 sm:col-span-3">
+                    <label for="brand" className="text-sm font-medium text-gray-900 block mb-2">Service Provider img</label>
+                    <input type="text" name="providerImg" id="brand" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" defaultValue={user.photoURL} placeholder="photo url" required/>
+                </div>
+
                 <div className="col-span-6 sm:col-span-3">
                     <label for="price" className="text-sm font-medium text-gray-900 block mb-2">Price</label>
                     <input type="number" name="price" id="price" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="$2300" required/>

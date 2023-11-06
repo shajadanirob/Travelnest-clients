@@ -19,9 +19,9 @@ const AuthProvider = ({children}) => {
 }
 
 // update propile
-const handleUpdateProfile = (name, PhotoUrl,PhoneNumber) => {
+const handleUpdateProfile = (name, PhotoUrl) => {
     return updateProfile(auth.currentUser, {
-        displayName: name,phoneNumber:PhoneNumber, photoURL: PhotoUrl,
+        displayName: name,photoURL: PhotoUrl,
     })
 }
 

@@ -16,8 +16,12 @@ const Modal = () => {
         <div className="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
             <form action="">
                 <div className="mb-5">
-                    <label for="name" className="block mb-2 font-bold text-gray-600">Name</label>
-                    <input type="text" id="name" name="name" defaultValue={userName} className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <label for="name" className="block mb-2 font-bold text-gray-600">Service Name</label>
+                    <input type="text" id="name" name="name" defaultValue={ServiceName} className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                </div>
+                <div className="mb-5">
+                    <label for="name" className="block mb-2 font-bold text-gray-600">service Image</label>
+                    <input type="text" id="name" name="name" defaultValue={image} className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
 
                 <div className="mb-5">
@@ -41,7 +45,7 @@ const Modal = () => {
                     <input type="text" defaultValue={price}  id="twitter" name="twitter" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
 
-                <button className="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Submit</button>
+                <button className="block w-full bg-[#E5AE49] text-white font-bold p-4 rounded-lg">Book Now</button>
             </form>
         </div>
     </div>
@@ -49,7 +53,7 @@ const Modal = () => {
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button, it will close the modal */}
-              <button className="btn">Close</button>
+              <button className="btn bg-[#E5AE49] text-white ">Close</button>
             </form>
           </div>
         </div>

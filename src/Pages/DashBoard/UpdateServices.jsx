@@ -52,7 +52,7 @@ const UpdateServices = () => {
 
       <div className="flex items-start justify-between p-5 border-b rounded-t">
           <h3 className="text-3l  font-semibold">
-              Add Product
+              Updated a Services
           </h3>
       </div>
   
@@ -61,7 +61,7 @@ const UpdateServices = () => {
               <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
                       <label for="product-name" className="text-sm font-medium text-gray-900 block mb-2"> Your name</label>
-                      <input type="text" defaultValue={user?.displayName
+                      <input type="text" defaultValue={lodar?.userName
   } name="name" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"  required=""/>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
@@ -70,7 +70,7 @@ const UpdateServices = () => {
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                       <label for="product-name" className="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-                      <input type="email" defaultValue={user?.email} name="email" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"  required/>
+                      <input type="email" defaultValue={lodar?.userEmail} name="email" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"  required/>
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                       <label for="category" className="text-sm font-medium text-gray-900 block mb-2"> Service Area</label>

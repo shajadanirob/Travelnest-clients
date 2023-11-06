@@ -15,6 +15,8 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ServicesDetails from "../Pages/Services/ServicesDetals/ServicesDetails";
 import Modal from "../Pages/Services/ServicesDetals/Modal";
 
+import SingleServices from "../Pages/Services/SingleServices";
+
 const router = createBrowserRouter([
     {
         path: "/",

@@ -13,11 +13,10 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault()
         const name = e.target.name.value
-        const PhoneNumber = e.target.PhoneNumber.value
-        const PhotoUrl = e.target.PhotoUrl.value
+        const photoURL = e.target.photoURL.value
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, PhoneNumber, PhotoUrl, email, password)
+        console.log(name,  photoURL, email, password)
         if (password.length < 6) {
             toast.error('Password must be at least 6 characters');
             return;
@@ -33,7 +32,7 @@ const Register = () => {
 
         createUser(email,password)
         .then(result => {
-            handleUpdateProfile(name, PhoneNumber ,PhotoUrl)
+            handleUpdateProfile(name,photoURL)
             .then(() =>{
                 toast.success('Successfully created!');
                 navigate('/')
@@ -84,18 +83,12 @@ const Register = () => {
 
 
                         <div className="mb-6">
-                            <label className="block mb-2 font-extrabold" >Photo Url</label>
-                            <input className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-gray-400 bg-white shadow border-2 border-indigo-900 rounded" type="PhotoUrl" placeholder="PhotoUrl" name="PhotoUrl" required />
+                            <label className="block mb-2 font-extrabold" >photoURL</label>
+                            <input className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-gray-400 bg-white shadow border-2 border-indigo-900 rounded" type="photoURL" placeholder="PhotoUrl" name="photoURL" required />
                         </div>
 
 
-                        <div className="mb-6">
-                            <label className="block mb-2 font-extrabold" >Phone Number</label>
-                            <input className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-gray-400 bg-white shadow border-2 border-indigo-900 rounded" type="Phone Number"
-                                name="PhoneNumber"
-                                placeholder="PhoneNumber" required />
-                        </div>
-
+                
 
                         <div className="mb-6">
                             <label className="block mb-2 font-extrabold" >Email</label>
