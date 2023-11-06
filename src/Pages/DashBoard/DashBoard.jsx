@@ -20,7 +20,7 @@ const DashBoard = () => {
         <span className="material-icons-outlined float-left pr-2">  Manage Services</span>
         </Link>
 
-        <Link to='/TravelNest/dashboard/schedules' className="inline-block text-gray-600 hover:text-black my-4 w-full">
+        <div  className="inline-block text-gray-600 hover:text-black my-4 w-full">
         <span className="material-icons-outlined float-left pr-2">
 
         <div className="dropdown">
@@ -32,7 +32,7 @@ const DashBoard = () => {
         </div>
         </span>
        
-        </Link>
+        </div>
       </div>
 
   
