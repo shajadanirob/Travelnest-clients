@@ -1,11 +1,20 @@
 import { useLoaderData } from "react-router-dom";
 import Modal from "./Modal";
+import { useState } from "react";
+import RelatedService from "../../../Components/RelatedService/RelatedService";
 
 
 
 const ServicesDetails = () => {
     const servicesData = useLoaderData()
-    const{_id,userName,userEmail,ServiceName,price,serviceDescription,image,servicesArea,providerImg} = servicesData
+    const{_id,userName,userEmail,ServiceName,price,serviceDescription,image,servicesArea,providerImg} = servicesData;
+
+    const [bookings ,setBookings] = useState([])
+    const url = `http://localhost:5000/service/${userEmail}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => setBookings(data))
+
     return (
         <div>
    <div className="flex flex-wrap">
@@ -43,7 +52,19 @@ const ServicesDetails = () => {
       </div>
     </div>
     <img src={image} alt="Leafs" className="w-full h-48 mt-10 object-cover sm:h-screen sm:w-4/12"/>
+    <div className="pt-12 px-6 mx-auto">
+      <h1 className="text-3xl my-5 text-center">Related Service</h1>
+    <div className=" grid grid-cols-3 gap-5">
+    {
+      bookings.map(booking => <RelatedService key={booking._id} booking={booking}></RelatedService>)
+    }
   </div>
+</div>
+
+   
+  </div>
+  
+
 
         </div>
         
