@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import UseAuth from "../../../Hooks/UseAuth";
+import Swal from "sweetalert2";
 
 
 const Modal = () => {
@@ -35,6 +36,15 @@ const Modal = () => {
         .then(res => res.json())
         .then(data => {
           console.log(data)
+          if(data.insertedId){
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Your Services is Booking',
+                showConfirmButton: false,
+                timer: 1500
+              })
+          }
         })
     }
     

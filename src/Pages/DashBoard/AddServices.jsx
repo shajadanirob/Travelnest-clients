@@ -34,7 +34,7 @@ const AddServices = () => {
               Swal.fire({
                   position: 'center',
                   icon: 'success',
-                  title: 'Your product update successFully',
+                  title: 'Your Services update successFully',
                   showConfirmButton: false,
                   timer: 1500
                 })

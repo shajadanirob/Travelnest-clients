@@ -28,7 +28,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/TravelNest/services',
-                element:<Services></Services>
+                element:<Services></Services>,
+                loader: () => fetch('http://localhost:5000/services')
             },
             {
                 path:'/services/:id',
