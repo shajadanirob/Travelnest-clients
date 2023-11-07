@@ -14,10 +14,7 @@ import MyPendingWork from "../Pages/DashBoard/MyPendingWork";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ServicesDetails from "../Pages/Services/ServicesDetals/ServicesDetails";
 import Modal from "../Pages/Services/ServicesDetals/Modal";
-
-import SingleServices from "../Pages/Services/SingleServices";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
-
 const router = createBrowserRouter([
     {
         path: "/",
@@ -43,6 +40,7 @@ const router = createBrowserRouter([
                 loader:({params}) => fetch(`http://localhost:5000/services/${params.id}`)
 
             },
+
             {
                 path:'/services/:id',
                 errorElement:<ErrorPage></ErrorPage>,

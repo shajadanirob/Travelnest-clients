@@ -18,6 +18,7 @@ const ServicesDetails = () => {
     return (
         <div>
    <div className="flex flex-wrap">
+    <div className="flex flex-col-reverse lg:flex-row">
     <div className="w-full sm:w-8/12 mt-10">
       <div className="container mx-auto h-full sm:p-10">
         <header className="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
@@ -52,6 +53,7 @@ const ServicesDetails = () => {
       </div>
     </div>
     <img src={image} alt="Leafs" className="w-full h-48 mt-10 object-cover sm:h-screen sm:w-4/12"/>
+    </div>
     <div className="pt-12 px-6 mx-auto">
       <h1 className="text-3xl my-5 text-center">Related Service</h1>
     <div className=" grid grid-cols-3 gap-5">

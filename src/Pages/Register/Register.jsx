@@ -2,6 +2,8 @@
 import { Link,  useNavigate } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
 import toast from "react-hot-toast";
+import loginGif from '../../../public/login.json';
+import Lottie from "lottie-react";
 
 
 const Register = () => {
@@ -64,9 +66,9 @@ const Register = () => {
 
 
                         <div>
-                            <div className="flex justify-center items-center">
-                            <img className="w-[260px]" src="https://i.ibb.co/MgtkWyD/1519798591013.jpg" alt="" />
-                            </div>
+                        <div className="flex items-center justify-center">
+   <Lottie className="w-[50%]" animationData={loginGif}></Lottie>
+   </div>
                         </div>
 
 

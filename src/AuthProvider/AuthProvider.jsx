@@ -1,6 +1,7 @@
 import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
+import axios from "axios";
 
 
 
@@ -44,9 +45,25 @@ const handleUpdateProfile = (name, PhotoUrl) => {
 }
 
  useEffect(() => {
-        const unSubscribe = onAuthStateChanged(auth, (user) => {
-            setUser(user)
-    setLoading(false)
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser)
+            setLoading(false)
+            const userEmail = currentUser?.email || user.email;
+            const loggedUser ={email : userEmail}
+            if(currentUser){
+              
+                axios.post('http://localhost:5000/jwt' ,loggedUser,{ withCredentials : true })
+                .then(res =>{
+                    console.log('token response',res.data)
+                })
+            }
+            else{
+                axios.post('http://localhost:5000/logout',loggedUser,{withCredentials:true})
+            }
+
+
+
+
        });
         return () => {
             unSubscribe()

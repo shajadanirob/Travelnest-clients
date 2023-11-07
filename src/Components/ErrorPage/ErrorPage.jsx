@@ -3,6 +3,7 @@ import error from '../../../public/Error.json'
 import Lottie from "lottie-react";
 
 
+
 const ErrorPage = () => {
     return (
      
