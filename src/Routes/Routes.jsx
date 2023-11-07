@@ -82,7 +82,7 @@ const router = createBrowserRouter([
                         path:'/TravelNest/dashboard/pending',
                         element:<PrivetRoute>
                             <MyPendingWork></MyPendingWork>
-                        </PrivetRoute>
+                        </PrivetRoute>,
                     }
                     
                 ]
