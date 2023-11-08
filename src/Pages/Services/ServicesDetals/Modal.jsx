@@ -65,17 +65,7 @@ const Modal = () => {
     
 
 
-      
-
-
-
-
-
-
-
-
-
-
+    
     return (
         <dialog id="my_modal_4" className="modal">
         <div className="modal-box w-11/12 max-w-5xl">
@@ -86,20 +76,20 @@ const Modal = () => {
             <form onSubmit={handleSubmit}>
                 <div className="mb-5">
                     <label for="name" className="block mb-2 font-bold text-gray-600">Service Name</label>
-                    <input type="text" id="ServiceName" name="userName" defaultValue={ServiceName} className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <input readOnly type="text" id="ServiceName" name="userName" defaultValue={ServiceName} className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
                 <div className="mb-5">
                     <label for="name" className="block mb-2 font-bold text-gray-600">service Image</label>
-                    <input type="text" id="name" name="image" defaultValue={image} className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <input type="text" readOnly id="name" name="image" defaultValue={image} className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
 
                 <div className="mb-5">
                     <label  className="block mb-2 font-bold text-gray-600">services email</label>
-                    <input type="text" defaultValue={userEmail} id="twitter" name="ServicesEmail" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <input type="text" defaultValue={userEmail} readOnly id="twitter" name="ServicesEmail" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
                 <div className="mb-5">
                     <label className="block mb-2 font-bold text-gray-600">user email</label>
-                    <input type="text" defaultValue={user.email} id="twitter" name="userEmail" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <input readOnly type="text" defaultValue={user.email} id="twitter" name="userEmail" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
                 <div className="mb-5">
                     <label for="twitter" className="block mb-2 font-bold text-gray-600">Date</label>
@@ -111,10 +101,10 @@ const Modal = () => {
                 </div>
                 <div className="mb-5">
                     <label  className="block mb-2 font-bold text-gray-600">Price</label>
-                    <input type="text" defaultValue={price}  id="twitter" name="price" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <input readOnly type="text" defaultValue={price}  id="twitter" name="price" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
 
-                <button className="block w-full bg-[#E5AE49] text-white font-bold p-4 rounded-lg">Book Now</button>
+                <button className="block w-full bg-[#E5AE49]  font-bold p-4 rounded-lg">Book Now</button>
             </form>
         </div>
     </div>
@@ -122,7 +112,7 @@ const Modal = () => {
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button, it will close the modal */}
-              <button className="btn bg-[#E5AE49] text-white ">Close</button>
+              <button className="btn bg-[#E5AE49] ">Close</button>
             </form>
           </div>
         </div>

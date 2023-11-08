@@ -43,7 +43,7 @@ const ServicesDetails = () => {
 
 
 
-<button className="btn bg-[#E5AE49] text-white my-5" onClick={()=>document.getElementById('my_modal_4').showModal()}>Book Now</button>
+<button className="btn bg-[#E5AE49]  my-5" onClick={()=>document.getElementById('my_modal_4').showModal()}>Book Now</button>
 
 
 <Modal></Modal>
@@ -56,7 +56,7 @@ const ServicesDetails = () => {
     </div>
     <div className="pt-12 px-6 mx-auto">
       <h1 className="text-3xl my-5 text-center">Related Service</h1>
-    <div className=" grid grid-cols-3 gap-5">
+    <div className=" grid grid-cols-1 lg:grid-cols-3 gap-5">
     {
       bookings.map(booking => <RelatedService key={booking._id} booking={booking}></RelatedService>)
     }

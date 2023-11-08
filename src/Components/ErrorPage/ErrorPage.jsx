@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import error from '../../../public/Error.json'
 import Lottie from "lottie-react";
+import Footer from "../../Pages/Footer/Footer";
 
 
 

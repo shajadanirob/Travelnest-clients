@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB29g3zhYWxn5o4wJlFMeR2SMCL5MDTDoQ",
-  authDomain: "travelnest-c18b1.firebaseapp.com",
-  projectId: "travelnest-c18b1",
-  storageBucket: "travelnest-c18b1.appspot.com",
-  messagingSenderId: "927075855221",
-  appId: "1:927075855221:web:b3e65840c96b6e7003813c"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

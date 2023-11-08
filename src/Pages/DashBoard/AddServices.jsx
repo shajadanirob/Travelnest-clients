@@ -13,7 +13,7 @@ const AddServices = () => {
         const userEmail = form.email.value;
         const ServiceName = form.ServiceName.value;
         const price = form.price.value;
-        const servicesArea = form.area.value;
+        const servicesArea = form.servicesArea.value;
         const serviceDescription = form.description.value;
         const image = form.img.value
         const providerImg = form.providerImg.value
@@ -62,7 +62,7 @@ const AddServices = () => {
             <div className="grid grid-cols-6 gap-6">
             <div className="col-span-6 sm:col-span-3">
                     <label for="product-name" className="text-sm font-medium text-gray-900 block mb-2"> Your name</label>
-                    <input type="text" defaultValue={user?.displayName
+                    <input readOnly type="text" defaultValue={user?.displayName
 } name="name" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"  required=""/>
                 </div>
                 <div className="col-span-6 sm:col-span-3">
@@ -71,11 +71,15 @@ const AddServices = () => {
                 </div>
                 <div className="col-span-6 sm:col-span-3">
                     <label for="product-name" className="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-                    <input type="email" defaultValue={user?.email} name="email" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" required/>
+                    <input type="email" readOnly defaultValue={user?.email} name="email" id="product-name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" required/>
                 </div>
                 <div className="col-span-6 sm:col-span-3">
-                    <label for="category" className="text-sm font-medium text-gray-900 block mb-2"> Service Area</label>
-                    <input type="text" name="area" id="category" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" placeholder="Service Area" required/>
+                <select className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" name="servicesArea" required id="">
+                  <option disabled selected value="">Selected</option>
+                  <option value="Bankkok">Bankkok</option>
+                  <option value="Chottogram">Chottogram</option>
+                  <option value="Dhaka">Dhaka</option>
+                </select>
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
@@ -85,7 +89,7 @@ const AddServices = () => {
 
                 <div className="col-span-6 sm:col-span-3">
                     <label for="brand" className="text-sm font-medium text-gray-900 block mb-2">Service Provider img</label>
-                    <input type="text" name="providerImg" id="brand" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" defaultValue={user.photoURL} placeholder="photo url" required/>
+                    <input type="text" name="providerImg" id="brand" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5" defaultValue={user.photoURL} placeholder="photo url" readOnly required/>
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
@@ -98,7 +102,7 @@ const AddServices = () => {
                 </div>
             </div>
             <div className="p-6 border-t border-gray-200 rounded-b flex items-center justify-center">
-        <button className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Add Services</button>
+        <button className=" bg-[#E5AE49] focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Add Services</button>
     </div>
         </form>
       

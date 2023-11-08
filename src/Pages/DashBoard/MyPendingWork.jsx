@@ -6,7 +6,7 @@ const MyPendingWork = () => {
     const{user} =UseAuth()
     const [pendings ,setPendings] = useState([])
     const url = `http://localhost:5000/pendings/?email=${user.email}`
-    fetch(url)
+    fetch(url,{credentials:'include'})
     .then(res => res.json())
     .then(data => setPendings(data))
   

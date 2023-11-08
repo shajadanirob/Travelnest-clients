@@ -52,8 +52,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <div className="flex items-center">
-              {/* <img className="w-[70px] md:w-[100px] md:ml-56 lg:ml-20 " src={img} alt="Logo" className="h-8" /> */}
-              <h1>TravelNest</h1>
+              <img className="w-[50px] md:w-[100px] md:ml-56 lg:ml-20 " src= 'https://i.ibb.co/kxcM29P/Travel-App-or-Website-Logo-removebg-preview.png' alt="Logo" />
             </div>
           </div>
           <div className="hidden md:flex space-x-4 text-white font-semibold ">
@@ -67,12 +66,12 @@ const Navbar = () => {
                     <img src={user.photoURL} alt={user.displayName} />
                 </div>
             </label>
-            <button className="btn bg-[#FF630E] text-white"
+            <button className="btn bg-[#E5AE49] "
                         onClick={handlelogOut}
                     >Logout</button>
             </div>
             : <> <Link className='my-5' to='/TravelNest/login'>
-            <button className="btn bg-[#E5AE49] text-white">Login</button>
+            <button className="btn bg-[#E5AE49] ">Login</button>
             </Link> </>
           }
 
@@ -101,12 +100,12 @@ const Navbar = () => {
                     <img src={user.photoURL} alt={user.displayName} />
                 </div>
             </label>
-            <button className="btn bg-[#FF630E] text-white"
+            <button className="btn bg-[#E5AE49] "
                         onClick={handlelogOut}
                     >Logout</button>
             </div>
             :<> <Link to='/login'>
-            <button className="btn bg-[#FF630E] text-white">Login</button>
+            <button className="btn bg-[#E5AE49] text-white">Login</button>
             </Link></>
           }
          
