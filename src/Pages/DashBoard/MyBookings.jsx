@@ -10,7 +10,7 @@ const MyBookings = () => {
     const axiosSecure = UserAxiosSecure()
 
     const [bookings ,setBookings] = useState([])
-    const url = `http://localhost:5000/bookings?email=${user?.email}`
+    const url = `https://y-ebon-seven.vercel.app/bookings?email=${user?.email}`
     useEffect(() =>{
         axiosSecure.get(url)
         .then(res => setBookings(res.data))

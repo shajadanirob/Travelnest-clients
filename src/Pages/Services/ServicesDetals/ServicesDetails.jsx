@@ -10,7 +10,7 @@ const ServicesDetails = () => {
     const{_id,userName,userEmail,ServiceName,price,serviceDescription,image,servicesArea,providerImg} = servicesData;
 
     const [bookings ,setBookings] = useState([])
-    const url = `http://localhost:5000/service/${userEmail}`
+    const url = `https://y-ebon-seven.vercel.app/service/${userEmail}`
     fetch(url)
     .then(res => res.json())
     .then(data => setBookings(data))

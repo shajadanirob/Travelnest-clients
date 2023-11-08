@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const ManageService = () => {
     const [services,setServices] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://y-ebon-seven.vercel.app/services')
         .then(res =>res.json())
         .then(data => setServices(data))
     },[])
@@ -14,7 +14,7 @@ const ManageService = () => {
     
     const handleDelete = id =>{
         console.log(id)
-        fetch(`http://localhost:5000/delete/${id} `,{
+        fetch(`https://y-ebon-seven.vercel.app/delete/${id} `,{
             method:'DELETE'
         })
         .then(res => res.json())

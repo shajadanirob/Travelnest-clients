@@ -20,7 +20,7 @@ const AddServices = () => {
         console.log(userName,userEmail,ServiceName,price,servicesArea,serviceDescription,image)
         const services ={userName,userEmail,ServiceName,price,serviceDescription,image,servicesArea,providerImg}
       
-        fetch("http://localhost:5000/services", {
+        fetch("https://y-ebon-seven.vercel.app/services", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

@@ -26,7 +26,7 @@ const Modal = () => {
             ServiceName,image,ServicesEmail,userEmail,date,address,price
         }
         console.log(bookings)
-        fetch('http://localhost:5000/bookings',{
+        fetch('https://y-ebon-seven.vercel.app/bookings',{
           method:'POST',
           headers:{
             'content-type': 'application/json'
@@ -48,7 +48,7 @@ const Modal = () => {
         })
 
 
-        fetch('http://localhost:5000/pendings',{
+        fetch('https://y-ebon-seven.vercel.app/pendings',{
             method:'POST',
             headers:{
               'content-type': 'application/json'

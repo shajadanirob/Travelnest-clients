@@ -5,14 +5,14 @@ import SingleMyPending from "./SingleMyPending";
 const MyPendingWork = () => {
     const{user} =UseAuth()
     const [pendings ,setPendings] = useState([])
-    const url = `http://localhost:5000/pendings/?email=${user.email}`
+    const url = `https://y-ebon-seven.vercel.app/pendings/?email=${user.email}`
     fetch(url,{credentials:'include'})
     .then(res => res.json())
     .then(data => setPendings(data))
   
 
     const handlePendingConfirm = id =>{
-        fetch(`http://localhost:5000/pendings/${id}`,{
+        fetch(`https://y-ebon-seven.vercel.app/pendings/${id}`,{
             method:'PATCH',
             headers:{
                 'content-type' :'application/json'

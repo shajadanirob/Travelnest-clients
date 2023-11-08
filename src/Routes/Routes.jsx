@@ -19,17 +19,20 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
-                errorElement:<ErrorPage></ErrorPage>,
-                element:<Home></Home>
+              
+                element:<Home></Home>,
+                errorElement:<ErrorPage></ErrorPage>
             },
             {
                 path:'/TravelNest/services',
-                errorElement:<ErrorPage></ErrorPage>,
+                
                 element:<Services></Services>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://y-ebon-seven.vercel.app/services'),
+                // errorElement:<ErrorPage></ErrorPage>,
             },
             {
                 path:'/services/:id',
@@ -37,7 +40,7 @@ const router = createBrowserRouter([
                 element:<PrivetRoute>
                     <ServicesDetails></ServicesDetails>
                 </PrivetRoute>,
-                loader:({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader:({params}) => fetch(`https://y-ebon-seven.vercel.app/services/${params.id}`)
 
             },
 
@@ -45,14 +48,14 @@ const router = createBrowserRouter([
                 path:'/services/:id',
                 errorElement:<ErrorPage></ErrorPage>,
                 element:<Modal></Modal>,
-                loader:({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader:({params}) => fetch(`https://y-ebon-seven.vercel.app/services/${params.id}`)
 
             },
             {
                 path:'/TravelNest/update/:id',
                 errorElement:<ErrorPage></ErrorPage>,
                 element:<UpdateServices></UpdateServices>,
-                loader:({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+                loader:({params}) => fetch(`https://y-ebon-seven.vercel.app/update/${params.id}`)
             },
             {
                 path:'/TravelNest/dashboard',

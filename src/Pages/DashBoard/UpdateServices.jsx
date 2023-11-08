@@ -23,7 +23,7 @@ const UpdateServices = () => {
       const updatedProduct ={userName,userEmail,ServiceName,price,serviceDescription,image,servicesArea}
 
 
-      fetch(`http://localhost:5000/update/${lodar._id} `, {
+      fetch(`https://y-ebon-seven.vercel.app/update/${lodar._id} `, {
         method: "PUT",
         headers: {
           'content-type': 'application/json'

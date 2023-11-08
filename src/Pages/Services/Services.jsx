@@ -9,7 +9,7 @@ const Services = () => {
     const allData = useLoaderData()
     const [isShow,setIsShow] = useState(false)
     // useEffect(()=>{
-    //     fetch('http://localhost:5000/services')
+    //     fetch('https://y-ebon-seven.vercel.app/services')
     //     .then(res =>res.json())
     //     .then(data => setServices(data))
     // },[])

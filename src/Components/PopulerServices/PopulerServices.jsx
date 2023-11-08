@@ -6,7 +6,7 @@ import SinglePopuler from "./SinglePopuler";
 const PopulerServices = () => {
   const [populers ,setPopulers] = useState([]);
   useEffect(() =>{
-    fetch('http://localhost:5000/services')
+    fetch('https://y-ebon-seven.vercel.app/services')
     .then(res => res.json())
     .then(data => setPopulers(data))
   },[])

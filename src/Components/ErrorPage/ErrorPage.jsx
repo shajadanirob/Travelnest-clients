@@ -55,6 +55,7 @@ const ErrorPage = () => {
     
         <p className="mt-4 text-gray-500">We can't find that page.</p>
       </div>
+      <Footer></Footer>
     </div>
     );
 };
