@@ -19,9 +19,6 @@ const SingleMange = ({service,handleDelete}) => {
                     <div className="text-sm font-medium text-gray-900">
                        {userName}
                     </div>
-                    <div className="text-sm text-gray-500">
-                      {userEmail}
-                    </div>
                 </div>
             </div>
         </td>
@@ -30,7 +27,7 @@ const SingleMange = ({service,handleDelete}) => {
             <div className="text-sm text-gray-500">Optimization</div>
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-            jane.cooper@example.com
+        {userEmail}
         </td>
         <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
             <Link to={`/TravelNest/update/${_id}`} className="text-indigo-600 hover:text-indigo-900">Edit</Link>
