@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import SinglePopuler from "./SinglePopuler";
+import { Link } from "react-router-dom";
 
 
 const PopulerServices = () => {
@@ -26,6 +27,9 @@ const PopulerServices = () => {
 
 
         </div>
+        <Link to='/TravelNest/services' className="flex justify-center items-center my-5">
+          <button className="btn bg-[#E5AE49]">See All</button>
+        </Link>
       </div>
     );
 };

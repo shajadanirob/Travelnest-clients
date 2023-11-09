@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-      <footer className="footer p-10 bg-[#111111]  opacity-90 text-base-content">
+      <footer className="footer  p-10 bg-[#111111]  opacity-90 text-base-content">
   <aside>
   <img className="w-[50px] md:w-[100px] md:ml-56 lg:ml-20 " src= 'https://i.ibb.co/kxcM29P/Travel-App-or-Website-Logo-removebg-preview.png' alt="Logo" />
       
