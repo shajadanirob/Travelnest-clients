@@ -1,18 +1,23 @@
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 const WhyChooseUs = () => {
+    useEffect(() =>{
+        Aos.init();
+          },[])
     return (
-        <div className="text-center p-8  pt-12 px-6 md:px-20">
-              <p className="text-[#efae37] text-xl my-5 text-center flex justify-center items-center md:text-left"> Why to choose US?</p>
-        <h2 className="font-bold text-[#111111] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Why to choose US?
+        <div className="text-center max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5">
+
+        <h2 data-aos='zoom-in-up' className="font-bold text-[#000000] text-2xl sm:text-3xl md:text-4xl text-center my-10 lg:text-5xl">
+        Why to  <span className="text-[#5c98f2]">choose US?</span>
         </h2>
     
         <div className="flex flex-wrap items-center mt-20 text-left text-center">
-            <div className="w-full md:w-3/5 lg:w-1/2 px-4">
+            <div data-aos='zoom-in-up' className="w-full md:w-3/5 lg:w-1/2 px-4">
                 <img src="https://i.ibb.co/Z6F1Msy/45.jpg" alt="gem" className="inline-block rounded shadow-lg border border-merino-400"/>
             </div>
-            <div className="w-full md:w-2/5 lg:w-1/2 px-4 text-center md:text-left lg:pl-12">
-                <h3 className="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
+            <div data-aos='zoom-in-down' className="w-full md:w-2/5 lg:w-1/2 px-4 text-center md:text-left lg:pl-12">
+                <h3  className="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
                 Diverse Services
                 </h3>
                 <p className="sm:text-lg mt-6">
@@ -22,10 +27,10 @@ const WhyChooseUs = () => {
         </div>
     
         <div className="flex flex-wrap items-center mt-20 text-left text-center">
-            <div className="w-full md:w-3/5 lg:w-1/2 px-4">
+            <div data-aos='zoom-in-up' className="w-full md:w-3/5 lg:w-1/2 px-4">
                 <img src="https://i.ibb.co/f17Wdd9/47.jpg" alt="project members" className="inline-block rounded shadow-lg border border-merino-400"/>
             </div>
-            <div className="w-full md:w-2/5 lg:w-1/2 px-4 md:order-first text-center md:text-left lg:pr-12">
+            <div data-aos='zoom-in-down' className="w-full md:w-2/5 lg:w-1/2 px-4 md:order-first text-center md:text-left lg:pr-12">
                 <h3 className="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
                 Personalization
                 </h3>
@@ -36,10 +41,10 @@ const WhyChooseUs = () => {
         </div>
     
         <div className="flex flex-wrap items-center mt-20 text-left  text-center">
-            <div className="w-full md:w-3/5 lg:w-1/2 px-4">
+            <div data-aos='zoom-in-up' className="w-full md:w-3/5 lg:w-1/2 px-4">
                 <img src="https://i.ibb.co/1L6gyDt/46.jpg" alt="editor" className="inline-block rounded shadow-lg border border-merino-400"/>
             </div>
-            <div className="w-full md:w-2/5 lg:w-1/2 px-4 text-center md:text-left lg:pl-12">
+            <div data-aos='zoom-in-down' className="w-full md:w-2/5 lg:w-1/2 px-4 text-center md:text-left lg:pl-12">
                 <h3 className="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
                 Convenience
                 </h3>
@@ -50,10 +55,10 @@ const WhyChooseUs = () => {
         </div>
     
         <div className="flex flex-wrap items-center mt-20 text-left text-center">
-            <div className="w-full md:w-3/5 lg:w-1/2 px-4">
+            <div data-aos='zoom-in-up' className="w-full md:w-3/5 lg:w-1/2 px-4">
                 <img src="https://i.ibb.co/DkQzFb3/48.jpg" alt="bulk editing" className="inline-block rounded shadow-lg border border-merino-400"/>
             </div>
-            <div className="w-full md:w-2/5 lg:w-1/2 px-4 md:order-first text-center md:text-left lg:pr-12">
+            <div data-aos='zoom-in-down' className="w-full md:w-2/5 lg:w-1/2 px-4 md:order-first text-center md:text-left lg:pr-12">
                 <h3 className="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
                 Support
                 </h3>

@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import UseAuth from "../../../Hooks/UseAuth";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 
 const Modal = () => {
@@ -37,13 +38,7 @@ const Modal = () => {
         .then(data => {
           console.log(data)
           if(data.insertedId){
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Your Services is Booking',
-                showConfirmButton: false,
-                timer: 1500
-              })
+            toast.success('your service booked successfully');
           }
         })
 
@@ -104,7 +99,7 @@ const Modal = () => {
                     <input readOnly type="text" defaultValue={price}  id="twitter" name="price" placeholder="Put in your fullname." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
 
-                <button className="block w-full bg-[#E5AE49]  font-bold p-4 rounded-lg">Book Now</button>
+                <button className="inline-flex text-white bg-[#5c98f2] border-0  focus:outline-none hover:bg-[5c98f2] rounded-full py-2 px-6 text-lg">Book Now</button>
             </form>
         </div>
     </div>
@@ -112,7 +107,7 @@ const Modal = () => {
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button, it will close the modal */}
-              <button className="btn bg-[#E5AE49] ">Close</button>
+              <button className="inline-flex text-white bg-[#5c98f2] border-0  focus:outline-none hover:bg-[5c98f2] rounded-full py-2 px-6 text-lg">Close</button>
             </form>
           </div>
         </div>

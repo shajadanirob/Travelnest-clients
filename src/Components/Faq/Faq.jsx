@@ -1,14 +1,22 @@
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Faq = () => {
+    useEffect(() =>{
+        Aos.init();
+          },[])
+  
     return (
-        <div className="pt-12 px-6 md:px-20">
+        <div className="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5">
          
-        <p className="text-[#efae37] text-xl my-5 text-center flex justify-center items-center md:text-left">FAQ</p>
-        <h2 className="font-bold text-[#111111] text-2xl sm:text-3xl md:text-4xl text-center my-10 lg:text-5xl">
-        Frequenty asked questions
+        <h2 data-aos='zoom-in-up' className="font-bold text-[#000000] text-2xl sm:text-3xl md:text-4xl text-center my-10 lg:text-5xl">
+        Frequenty asked <span className="text-[#5c98f2]"> questions</span>
         </h2>
+
+
   <div
+  data-aos='zoom-in-down'
     className="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
     <div className="mx-auto px-5">
         <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">

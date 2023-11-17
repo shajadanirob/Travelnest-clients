@@ -15,6 +15,7 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ServicesDetails from "../Pages/Services/ServicesDetals/ServicesDetails";
 import Modal from "../Pages/Services/ServicesDetals/Modal";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
+import Allusers from "../Pages/DashBoard/AllUsers/Allusers";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -31,8 +32,7 @@ const router = createBrowserRouter([
                 path:'/TravelNest/services',
                 
                 element:<Services></Services>,
-                loader: () => fetch('https://y-ebon-seven.vercel.app/services'),
-                // errorElement:<ErrorPage></ErrorPage>,
+                
             },
             {
                 path:'/services/:id',
@@ -95,6 +95,14 @@ const router = createBrowserRouter([
                         errorElement:<ErrorPage></ErrorPage>,
                         element:<PrivetRoute>
                             <MyPendingWork></MyPendingWork>
+                        </PrivetRoute>,
+                    },
+                    
+                    {
+                        path:'/TravelNest/dashboard/allUsers',
+                        errorElement:<ErrorPage></ErrorPage>,
+                        element:<PrivetRoute>
+                            <Allusers></Allusers>
                         </PrivetRoute>,
                     }
                     

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
+    "aos": "^2.3.4",
     "axios": "^1.6.0",
     "firebase": "^10.5.2",
     "localforage": "^1.10.0",
@@ -18,10 +20,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
+    "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.18.0",
     "react-simple-typewriter": "^5.0.1",
     "sort-by": "^1.2.0",
-    "sweetalert2": "^11.9.0"
+    "sweetalert2": "^11.9.0",
+    "swiper": "^11.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

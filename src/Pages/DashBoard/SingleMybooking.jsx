@@ -1,32 +1,54 @@
+import toast from "react-hot-toast";
+
+
 const SingleMybooking = ({booking}) => {
-    const{image,ServiceName,price} =booking
+    const{_id ,image,ServiceName,price} =booking
+
+
+    
+  const handleDelete = id =>{
+    console.log(id)
+    fetch(`  https://y-ebon-seven.vercel.app/bookings/${id}`,{
+        method:'DELETE'
+    })
+    .then(res => res.json())
+    
+    .then(data => {
+        console.log(data)
+
+        if(data.deletedCount >0){
+            toast.success('Your booked in successfully delete');
+             
+        }
+    } )
+}
+
+
+
+
     return (
         <div>
+ 
 
-<div className="container mx-auto px-4 py-8">
-    <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-        <h1 className="text-2xl font-bold my-4">Shopping Cart</h1>
-        <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-      Checkout
-    </button>
-    </div>
-    <div className="mt-8">
-        <div className="flex flex-col md:flex-row border-b border-gray-400 py-4">
-            <div className="flex-shrink-0">
-                <img src={image} alt="Product image" className="w-32 h-32 object-cover"/>
-            </div>
-            <div className="mt-4 md:mt-0 md:ml-6">
-                <h2 className="text-lg font-bold">{ServiceName}</h2>
-                <div className="mt-4 flex items-center">
-                    <span className="mr-2 text-gray-600">Price:</span>
-                    <span className="ml-auto font-bold">${price}</span>
+
+
+<div className="flex items-center mb-4">
+                <img className="h-16 w-16 object-contain rounded-lg mr-4" src={image}
+                    alt="Product"/>
+                <div className="flex-1">
+                    <h2 className="text-lg font-bold"> {ServiceName}</h2>
+                    <span className="text-gray-600">${price}</span>
                 </div>
+                <button onClick={()=>handleDelete(_id)}  className="text-gray-600 hover:text-red-500">
+                    <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 13H5v-2h14v2z" />
+                    </svg>
+                </button>
             </div>
-        </div>
-       
-    </div>
-  
-</div>
+
+
+
+
 
 
 

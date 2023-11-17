@@ -90,7 +90,7 @@ const UpdateServices = () => {
                   </div>
               </div>
               <div className="p-6 border-t border-gray-200 rounded-b flex items-center justify-center">
-          <button className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Update Services</button>
+          <button className="inline-flex text-white bg-[#5c98f2] border-0  focus:outline-none hover:bg-[5c98f2] rounded-full py-2 px-6 text-lg" type="submit">Update Services</button>
       </div>
           </form>
         

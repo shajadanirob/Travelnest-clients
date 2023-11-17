@@ -1,5 +1,7 @@
 import Swal from "sweetalert2";
 import UseAuth from "../../Hooks/UseAuth";
+import loginGif from '../../../public/add.json';
+import Lottie from "lottie-react";
 
 
 
@@ -49,12 +51,15 @@ const AddServices = () => {
 
 
     return (
-        <div className="bg-white border border-4 rounded-lg shadow relative w-full ">
-
-    <div className="flex items-start justify-between p-5 border-b rounded-t">
-        <h3 className="text-3l  font-semibold">
+        <div className="bg-white border border-4 rounded-lg shadow relative w-full">
+             <div className="flex justify-center items-center">
+             <Lottie className="w-[60%] lg:w-[30%]" animationData={loginGif}></Lottie>
+             </div>
+             <h3 className="text-3l text-[#5c98f2] text-center font-bold">
             Add Product
         </h3>
+
+    <div className="flex items-start justify-between p-5 border-b rounded-t">
     </div>
 
     <div className="p-6 space-y-6">
@@ -102,7 +107,7 @@ const AddServices = () => {
                 </div>
             </div>
             <div className="p-6 border-t border-gray-200 rounded-b flex items-center justify-center">
-        <button className=" bg-[#E5AE49] focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Add Services</button>
+        <button className=" inline-flex text-white bg-[#5c98f2] border-0  focus:outline-none hover:bg-[5c98f2] rounded-full py-2 px-6 text-lg" type="submit">Add Services</button>
     </div>
         </form>
       

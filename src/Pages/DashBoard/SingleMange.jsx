@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const SingleMange = ({service,handleDelete}) => {
     
-    const{_id,image,userName,userEmail} =service
+    const{_id,image,userName,userEmail,ServiceName} =service
   
 
 
@@ -23,17 +23,21 @@ const SingleMange = ({service,handleDelete}) => {
             </div>
         </td>
         <td className="px-6 py-4 whitespace-nowrap">
-            <div className="text-sm text-gray-900">Regional Paradigm Technician</div>
-            <div className="text-sm text-gray-500">Optimization</div>
+            <div className="text-sm text-gray-900">{ServiceName}</div>
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
         {userEmail}
         </td>
         <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-            <Link to={`/TravelNest/update/${_id}`} className="text-indigo-600 hover:text-indigo-900">Edit</Link>
-            <button onClick={() => handleDelete(_id)} className="ml-2 text-red-600 hover:text-red-900">Delete</button>
+            <Link to={`/TravelNest/update/${_id}`} className="inline-flex text-white bg-[#5c98f2] border-0  focus:outline-none hover:bg-[5c98f2] rounded-full py-2 px-6 text-lg">Edit</Link>
+            <button onClick={() => handleDelete(_id)} className="inline-flex text-white bg-[#5c98f2] border-0  focus:outline-none hover:bg-[5c98f2] rounded-full py-2 px-6 text-lg">Delete</button>
         </td>
     </tr>
+
+
+
+
+    
     );
 };
 

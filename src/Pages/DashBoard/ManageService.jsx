@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import SingleMange from "./SingleMange";
 import Swal from "sweetalert2";
+import UseAuth from "../../Hooks/UseAuth";
 
 
 const ManageService = () => {
+    const {user} = UseAuth()
     const [services,setServices] = useState([])
     useEffect(()=>{
-        fetch('https://y-ebon-seven.vercel.app/services')
+        fetch(`https://y-ebon-seven.vercel.app/${user?.email}`)
         .then(res =>res.json())
         .then(data => setServices(data))
-    },[])
+    },[user])
     
     
     const handleDelete = id =>{
